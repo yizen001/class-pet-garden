@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f5f7fc">
+<title>班级宠物园 · 统一工作台</title>
+<link rel="stylesheet" href="/assets/app.css">
+</head>
+<body>
+<!-- 登录层 -->
+<div class="auth-layer" id="authLayer">
+  <div class="auth-wrap">
+    <section class="auth-hero">
+      <div class="brand" style="padding:0">
+        <div class="brand-mark" id="brandMark"></div>
+        <div class="brand-txt"><strong>班级宠物园</strong><span>PET GARDEN</span></div>
+      </div>
+      <h1>每一份努力，<br>都有一只小家伙陪着长大</h1>
+      <p>课堂表现转化为成长经验，宠物从蛋进化到传说形态。一个入口，教师、学生、家长各有一块专属空间，数据实时同步。</p>
+      <div class="auth-feats" id="authFeats"></div>
+      <div class="hero-pets" id="heroPets"></div>
+    </section>
+    <section class="auth-card">
+      <h2>欢迎回来</h2>
+      <div class="hint">选择身份后登录，直接进入对应的工作台</div>
+      <div class="role-tabs" id="roleTabs"></div>
+      <div id="authError" class="auth-error" role="alert"></div>
+      <form id="authForm" autocomplete="off"></form>
+      <div class="demo-box" id="demoBox"></div>
+    </section>
+  </div>
+</div>
+
+<!-- 统一应用壳 -->
+<div class="app hidden" id="appShell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark" id="appBrandMark"></div>
+      <div class="brand-txt"><strong>班级宠物园</strong><span id="appBrandSub">PET GARDEN</span></div>
+    </div>
+    <nav class="nav" id="sideNav"></nav>
+    <div class="side-foot"><b id="sideFootTitle">工作台</b><span id="sideFootDesc">服务端持久化 · 多端实时同步</span></div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div><h1 id="pageTitle">宠物园</h1></div>
+      <div class="sub" id="pageSub"></div>
+      <div class="topbar-spacer"></div>
+      <div class="sync-wrap" id="syncWrap"></div>
+      <label class="class-select" id="classSelectBox"></label>
+      <button class="btn soft sm" data-act="screen-enter" id="screenBtn"></button>
+      <span class="role-badge student" id="roleBadge"></span>
+      <button class="btn ghost sm" data-act="switch-identity" id="switchBtn" aria-label="切换身份"></button>
+    </header>
+    <div class="content">
+      <div class="screen-banner" id="screenBanner"></div>
+      <div id="views"></div>
+    </div>
+  </main>
+  <nav class="tabbar" id="tabBar"></nav>
+</div>
+<button class="btn primary screen-exit" data-act="screen-exit" id="screenExit"></button>
+<div id="modalRoot"></div>
+<div id="toast" aria-live="polite"></div>
+
+<script src="/assets/pets.js"></script>
+<script src="/assets/core.js"></script>
+<script src="/assets/app.js"></script>
+</body>
+</html>
